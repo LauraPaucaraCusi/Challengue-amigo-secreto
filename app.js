@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const inputAmigo = document.getElementById("amigo");
     const listaAmigos = document.getElementById("listaAmigos");
