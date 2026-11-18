@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const indiceAleatorio = Math.floor(Math.random() * amigos.length);
         const amigoSecreto = amigos[indiceAleatorio];
-        resultado.innerHTML = `<p>🎉 El amigo secreto es: <strong>${amigoSecreto}</strong> 🎉</p>`;
+        resultado.replaceChildren();
+        const mensaje = document.createElement("li");
+        const destacado = document.createElement("strong");
+        destacado.textContent = amigoSecreto;
+        mensaje.append("🎉 El amigo secreto es: ", destacado, " 🎉");
+        resultado.appendChild(mensaje);
     }
 });
